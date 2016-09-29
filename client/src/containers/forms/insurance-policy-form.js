@@ -45,15 +45,26 @@ class InsuranceForm extends Component {
   }
 
   submitMe(prop) {
+<<<<<<< 58331c2d5329caa5e09c21597b3f4a9e8fc2829c
+=======
+    this.props.handleNext();
+>>>>>>> form flow working for user signup
     //get encoded id from local storage
 		let id = localStorage.getItem('uid');
 		//code to decode user id stored in local storage
 		let code  = CryptoJS.AES.decrypt(id.toString(), 'key'); //need to change key
 		prop.uid = code.toString(CryptoJS.enc.Utf8);
 
+<<<<<<< 58331c2d5329caa5e09c21597b3f4a9e8fc2829c
     axios.post('/api/patient/insurance', prop)
       .then( found => {
         this.context.router.push('/patient/dashboard');
+=======
+    axios.post('/api/patient/insurance', info)
+      .then( found => {
+        console.log("INSURANCE INFO LOGGED", err);
+        // this.context.router.push('/patient/dashboard');
+>>>>>>> form flow working for user signup
       })
       .catch( err => {
           console.log("ERROR ENTERING INFORMATION", err);
@@ -97,7 +108,11 @@ class InsuranceForm extends Component {
                   <Field name="policy_number" type="number" component={this.renderTextField} label="Policy Number"/>
                   {error && <strong>{error}</strong>}
                   <div className="formBtns clearfix">
+<<<<<<< 58331c2d5329caa5e09c21597b3f4a9e8fc2829c
                     <div>{this.getStepContent(this.props.stepIndex)}</div>
+=======
+                    <p>{this.getStepContent(this.props.stepIndex)}</p>
+>>>>>>> form flow working for user signup
                     <div style={{marginTop: 12}}>
                       <FlatButton
                         label="Back"

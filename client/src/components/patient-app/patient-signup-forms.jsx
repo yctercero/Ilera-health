@@ -75,7 +75,11 @@ class PatientAppFormsContainer extends Component {
 							<StepLabel>Insurance Info</StepLabel>
 						</Step>
 					</Stepper>
+<<<<<<< 58331c2d5329caa5e09c21597b3f4a9e8fc2829c
 					<div>{this.getStepContent(stepIndex)}</div>
+=======
+								<p>{this.getStepContent(stepIndex)}</p>
+>>>>>>> form flow working for user signup
 				</div>
 		); 
 	}

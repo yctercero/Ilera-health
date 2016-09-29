@@ -191,7 +191,11 @@ class DemographicForm extends Component {
 						</Field>
 						{error && <strong>{error}</strong>}
 						<div className="formBtns clearfix">
+<<<<<<< 58331c2d5329caa5e09c21597b3f4a9e8fc2829c
 							<div>{this.getStepContent()}</div>
+=======
+							<p>{this.getStepContent()}</p>
+>>>>>>> form flow working for user signup
 							<div style={{marginTop: 12}}>
 								<FlatButton
 									label="Back"
